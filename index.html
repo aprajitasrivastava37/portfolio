@@ -281,6 +281,27 @@
             .glass-sphere { width: 150px; height: 150px; }
             nav { padding: 1.5rem 1rem !important; }
         }
+        /* Pop-up Animation for Philosophy & Interest Cards */
+.philosophy-card-group .bg-\[var\(--bg\)\]\/80 {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastic "pop" effect */
+    border: 1px solid var(--border-light);
+}
+
+.philosophy-card-group .bg-\[var\(--bg\)\]\/80:hover {
+    transform: translateY(-12px) scale(1.03) !important; /* Lifts and grows */
+    background: white !important; /* Brightens up */
+    box-shadow: 0 30px 60px -12px rgba(30, 41, 59, 0.2), 
+                0 18px 36px -18px rgba(0, 0, 0, 0.3) !important;
+    border-color: var(--accent) !important;
+    z-index: 20;
+}
+
+/* Optional: Slight fade for the cards you AREN'T hovering on */
+.philosophy-card-group:hover .bg-\[var\(--bg\)\]\/80:not(:hover) {
+    opacity: 0.7;
+    filter: blur(1px);
+    transform: scale(0.98);
+}
     </style>
 </head>
 <body class="noise">
@@ -323,7 +344,7 @@
             
             <div class="max-w-2xl mx-auto mb-12 md:mb-16 reveal px-4">
                 <p class="text-sm md:text-xl text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed">
-                    Learning to shape intelligence through logic, code, and thoughtful web experiences as an AI-ML student.
+                    Blending technology with calm design and humanly intention. I see tech as a quiet powerful ~ force, thoughtful and impactful.
                 </p>
             </div>
 
@@ -361,32 +382,60 @@
             <path d="M10 50 L50 20 M10 50 L50 80 M50 20 L90 50 M50 80 L90 50 M50 20 L50 80" stroke="currentColor" stroke-width="0.1" fill="none"/>
         </svg>
 
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 md:gap-24 items-center philosophy-card-group">
+
             <div class="reveal-left bg-[var(--bg)]/80 backdrop-blur-xl p-8 md:p-16 rounded-[2.5rem] shadow-xl border-l-8 border-[var(--accent)] transition-transform duration-500 hover:scale-[1.02]">
+
                 <h2 class="text-[9px] md:text-xs uppercase tracking-[0.4em] md:tracking-[0.5em] text-[var(--accent)] font-bold mb-6 md:mb-8">My Philosophy</h2>
-                <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-8 md:mb-10">Logic is the foundation; <span class="font-serif italic font-normal text-[var(--accent)]">Aesthetics</span> is the bridge.</h3>
+
+                <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-8 md:mb-10">Logic defines structure;<br> <span class="font-serif italic font-normal text-[var(--accent)]">Aesthetics</span> define the experience.</h3>
+
                 <p class="text-base md:text-lg text-[var(--secondary-text)] opacity-90 leading-relaxed font-light mb-10 md:mb-12">
-                    I'm Aprajita Srivastava, a BCA (AI-ML) student at Galgotias University, currently exploring how clean design and logical thinking come together to create meaningful web experiences.
-                    I'm currently building frontend projects using HTML, CSS, and JavaScript, while strengthening my foundation in Python, Artificial Intelligence, and Machine Learning through hands-on practice.
+
+                    I'm <strong class="font-bold">Aprajita Srivastava</strong>, a <strong class="font-bold">BCA (AI-ML) student at Galgotias University</strong>, passionate about building clean, intuitive, and meaningful digital experiences.
+
+                    I enjoy working at the intersection of <strong class="font-bold">frontend development and artificial intelligence</strong>, creating interfaces that are not only functional but thoughtfully designed.
+
+                    Currently, I'm strengthening my foundation in <strong class="font-bold"> Python, Machine Learning, and mordern web technologies </strong>.
+
                 </p>
+
                 <div class="grid grid-cols-2 gap-8">
+
                     <div>
+
                         <p class="text-xl md:text-2xl font-bold mb-2">2027</p>
+
                         <p class="text-[9px] md:text-[10px] uppercase tracking-widest opacity-50">Graduation Year</p>
+
                     </div>
+
                 </div>
+
             </div>
-            
+
+           
+
             <div class="grid grid-cols-1 gap-4 md:gap-6 reveal">
+
                 <div class="bg-[var(--bg)]/80 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-xl border-l-8 border-[var(--accent)] transition-transform duration-500 hover:scale-[1.02]">
+
                     <h4 class="text-xs uppercase tracking-[0.4em] font-black mb-6 text-[var(--accent)]">Interests</h4>
-                    <p class="text-sm md:text-base text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed">I enjoy working on projects that are simple, functional, and thoughtfully designed. I focus on writing clean code, understanding the logic behind every feature, and continuously improving user experience through small details and interactions.</p>
+
+                    <p class="text-sm md:text-base text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed">I enjoy working on projects that balance <strong>simplicity, functionality, and visual clarity</strong>. I focus on writing clean code, understanding the logic behind every feature as well as user behaviour, and refining small interactions that make an experience feel smooth and intuituive.</p>
+
                 </div>
+
                 <div class="bg-[var(--bg)]/80 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-xl border-l-8 border-[var(--accent)] transition-transform duration-500 hover:scale-[1.02]">
+
                     <h4 class="text-xs uppercase tracking-[0.4em] font-black mb-6 text-[var(--accent)]">Looking Ahead</h4>
-                    <p class="text-sm md:text-base text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed">I'm working towards becoming a developer who can combine AI-ML concepts with practical web applications and contribute to meaningful, real-world solutions.</p>
+
+                    <p class="text-sm md:text-base text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed">I'm working towards becoming a developer who can combine <strong>AI-ML concepts with practical web applications</strong>, solving real - world problems through thoughtful design, logic, and continuous learning.</p>
+
                 </div>
+
             </div>
+
         </div>
     </section>
 
@@ -468,7 +517,7 @@
     <section id="resume" class="py-20 md:py-32 px-6 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-[9px] md:text-[10px] uppercase tracking-[0.8em] text-[var(--accent)] font-bold mb-4">Professional Artifacts</h2>
+                <h2 class="text-[9px] md:text-[10px] uppercase tracking-[0.8em] text-[var(--accent)] font-bold mb-4">Professional Summary</h2>
                 <h3 class="text-3xl md:text-5xl font-bold text-[var(--primary-text)] mb-12">Curriculum <span class="font-serif italic font-normal">Vitae</span></h3>
             </div>
 
@@ -478,7 +527,7 @@
                 <a href="public/resume.pdf" download="Aprajita_Srivastava_Resume.pdf" class="btn-premium w-full sm:w-auto text-center bg-transparent !text-[var(--primary-text)] border border-[var(--primary-text)] hover:bg-[var(--primary-text)] hover:!text-white relative z-10">Download PDF</a>
             </div>
             
-            <p class="text-center mt-12 text-[9px] md:text-[10px] uppercase tracking-[0.4em] opacity-40 reveal">Updated for 2024 Academic year</p>
+            <p class="text-center mt-12 text-[9px] md:text-[10px] uppercase tracking-[0.4em] opacity-40 reveal">Updated for 2025 Academic year</p>
         </div>
     </section>
 
