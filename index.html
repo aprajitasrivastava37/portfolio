@@ -474,44 +474,148 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 reveal">
+    <section id="projects" class="py-20 md:py-32 px-0 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6 mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-end reveal">
                 <div>
-                    <h2 class="text-[9px] md:text-[10px] uppercase tracking-[0.5em] text-[var(--accent)] font-bold mb-4 md:mb-6">Portfolio</h2>
-                    <h3 class="text-3xl md:text-5xl font-bold text-[var(--primary-text)]">Featured <span class="font-serif italic font-normal">Piece</span></h3>
+                    <h2 class="text-[9px] md:text-[10px] uppercase tracking-[0.5em] text-[var(--accent)] font-bold mb-4">Portfolio</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-[var(--primary-text)]">Selected <span class="font-serif italic font-normal">Works</span></h3>
                 </div>
-                <p class="text-[9px] md:text-[10px] uppercase tracking-[0.3em] opacity-40 mt-6 md:mt-0">Created / 2024</p>
+                <p class="text-[9px] md:text-[10px] uppercase tracking-[0.3em] opacity-40 mt-6 md:mt-0">Swipe or Hover to Pause</p>
             </div>
+        </div>
 
-            <div class="card-container reveal">
-                <div class="project-card rounded-[2.5rem] md:rounded-[4rem] overflow-hidden p-6 md:p-12 relative shadow-sm">
-                    <div class="flex flex-col lg:flex-row gap-10 md:gap-16 items-center">
-                        <div class="w-full lg:w-1/2 aspect-[16/10] lg:aspect-[4/5] bg-[var(--primary-text)] rounded-[2rem] md:rounded-[3rem] overflow-hidden relative group">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1000" 
-                                  class="absolute inset-0 w-full h-full object-cover filter contrast-[1.1] grayscale-[30%] group-hover:scale-105 transition-transform duration-1000 opacity-80" 
-                                  alt="Avon Herbal Concept">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[var(--primary-text)]/70 to-transparent"></div>
-                            <div class="absolute bottom-6 md:bottom-10 left-6 md:left-10">
-                                <span class="text-[2rem] md:text-[3rem] font-bold text-white tracking-tighter opacity-90">AHC</span>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/2">
-                            <div class="flex flex-wrap gap-2 md:gap-4 mb-6 md:mb-8">
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest bg-[var(--accent)] text-white px-3 md:px-4 py-1 rounded-full font-bold">Web App</span>
-                                <span class="text-[9px] md:text-[10px] uppercase tracking-widest border border-[var(--primary-text)]/20 text-[var(--primary-text)] px-3 md:px-4 py-1 rounded-full">Branding</span>
-                            </div>
-                            <h3 class="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-[var(--primary-text)]">Avon Herbal Cleaner</h3>
-                            <p class="text-base md:text-lg text-[var(--secondary-text)] opacity-90 font-medium leading-relaxed mb-8 md:mb-12">
-                                A high-performance digital storefront focusing on the organic cleaner market. Optimized for zero-latency interactions and accessible UI components.
-                            </p>
-                            <button onclick="openPreview('https://avonherbalcleaner.netlify.app/', 'Avon Herbal Cleaner')" class="btn-premium w-full md:w-auto text-center">View Live Experience</button>
-                        </div>
+        <div class="carousel-container relative w-full overflow-hidden mask-gradient">
+            <div class="carousel-track flex gap-8 md:gap-12 w-max hover:pause-animation">
+                
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Avon">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">AHC</span>
                     </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Avon Herbal</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">E-Commerce</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A high-performance digital storefront focusing on the organic cleaner market with zero-latency interactions.
+                    </p>
+                    <button onclick="openPreview('https://avonherbalcleaner.netlify.app/', 'Avon Herbal Cleaner')" class="btn-premium w-full text-center">View Project</button>
                 </div>
+
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Events">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">EVT</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Velvet Events</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">Management</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A dynamic platform for managing large-scale events, featuring real-time scheduling and attendee tracking.
+                    </p>
+                    <button onclick="openPreview('https://eventswebsite-roan.vercel.app/', 'Events Manager')" class="btn-premium w-full text-center">View Project</button>
+                </div>
+
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Wedding">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">WED</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Bliss Planner</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">Lifestyle</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A bespoke wedding planning interface designed to organize complex itineraries with an elegant user experience.
+                    </p>
+                    <button onclick="openPreview('https://weddingwebsite-opal.vercel.app/', 'Wedding Planner')" class="btn-premium w-full text-center">View Project</button>
+                </div>
+
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Avon">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">AHC</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Avon Herbal</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">E-Commerce</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A high-performance digital storefront focusing on the organic cleaner market with zero-latency interactions.
+                    </p>
+                    <button onclick="openPreview('https://avonherbalcleaner.netlify.app/', 'Avon Herbal Cleaner')" class="btn-premium w-full text-center">View Project</button>
+                </div>
+
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Events">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">EVT</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Velvet Events</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">Management</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A dynamic platform for managing large-scale events, featuring real-time scheduling and attendee tracking.
+                    </p>
+                    <button onclick="openPreview('https://eventswebsite-roan.vercel.app/', 'Events Manager')" class="btn-premium w-full text-center">View Project</button>
+                </div>
+
+                <div class="project-card w-[85vw] md:w-[600px] flex-shrink-0 rounded-[2.5rem] overflow-hidden p-6 md:p-10 relative shadow-sm border border-[var(--border-light)] bg-white group">
+                    <div class="aspect-[16/9] bg-[var(--primary-text)] rounded-[2rem] overflow-hidden relative mb-8">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800" 
+                             class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Wedding">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <span class="absolute bottom-6 left-6 text-4xl font-bold text-white tracking-tighter">WED</span>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-[var(--primary-text)]">Bliss Planner</h3>
+                        <span class="text-[10px] uppercase tracking-widest border border-black/10 px-3 py-1 rounded-full">Lifestyle</span>
+                    </div>
+                    <p class="text-sm text-[var(--secondary-text)] opacity-80 mb-8 leading-relaxed line-clamp-2">
+                        A bespoke wedding planning interface designed to organize complex itineraries with an elegant user experience.
+                    </p>
+                    <button onclick="openPreview('https://weddingwebsite-opal.vercel.app/', 'Wedding Planner')" class="btn-premium w-full text-center">View Project</button>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <style>
+        /* Infinite Scroll Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } /* Moves half the width (the length of the original set) */
+        }
+
+        .carousel-track {
+            animation: scroll 40s linear infinite; /* Adjust speed here (40s is smooth) */
+            width: fit-content;
+        }
+
+        .pause-animation:hover {
+            animation-play-state: paused;
+        }
+
+        /* Fade effect on edges */
+        .mask-gradient {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
 
     <!-- Resume Section -->
     <section id="resume" class="py-20 md:py-32 px-6 relative">
